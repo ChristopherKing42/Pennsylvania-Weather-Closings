@@ -20,8 +20,22 @@ from itertools import chain
 
 javascript = re.compile(r"ibsys.htvClosings.init\(({.*?})\)")
 wgalAddress = "http://www.wgal.com/weather/closings"
-def closingDictionary():
-    wgal = soup(urlopen(wgalAddress), 'lxml')
+def closingDictionary(updateCache=False, cache="closings.html"):
+    '''Returns a dictionary containing information about closed schools and bussinesses.'''
+    if not cache: updateCache = True
+    if updateCache:
+        wgalSite = urlopen(wgalAddress).read()
+        if cache:
+            with open(cache, 'w') as cacheFile:
+                cacheFile.write(wgalSite)
+    else:
+        try:
+            with open(cache, 'r') as cacheFile:
+                wgalSite = cacheFile.read()
+        except IOError:
+            return closingDictionary(updateCache=True, cache=cache)
+
+    wgal = soup(wgalSite, 'lxml')
     script = wgal.find(text = javascript)
     rawData = eval(re.search(javascript, script).group(1))
     organizedDict = {place.pop('name'): place for place in chain(*(letter['institutions'] for letter in rawData.values() if type(letter) == dict))}

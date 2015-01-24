@@ -13,7 +13,7 @@
 ##
 ##You should have received a copy of the GNU General Public License
 
-from bs4 import BeatifulSoup as soup
+from bs4 import BeautifulSoup as soup
 from urllib import urlopen
 import re
 from itertools import chain
@@ -24,5 +24,5 @@ def closingDictionary():
     wgal = soup(urlopen(wgalAddress), 'lxml')
     script = wgal.find(text = javascript)
     rawData = eval(re.search(javascript, script).group(1))
-    organizedDict = {place.pop('name'): place for place in chain(*(letter['institution'] for letter in rawData.values() if type(letter) == dict))}
+    organizedDict = {place.pop('name'): place for place in chain(*(letter['institutions'] for letter in rawData.values() if type(letter) == dict))}
     return organizedDict

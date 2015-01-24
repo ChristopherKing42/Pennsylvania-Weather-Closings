@@ -27,6 +27,20 @@ or if you want to update the cache you already have
 weatherScrapper.closingDictionary(useCache=False)
 ```
 
+It could theortically be used with other programming Languages by simply running it like this:
+```
+$ python2 weatherScrapper.py
+Dixon Univ Center-Harrisburg
+	STATUS: Saturday: Closed
+	EMAILLISTKEY: lan_closingsibstandard119
+	UPDATETIMESTAMP: 2015-01-23T15:16:00.000-06:00
+	ADDRESS: Harrisburg / Dauphin / PA
+Dillsburg Area Public Library
+	STATUS: ...
+```
+
+Not that callling it like this always sets `usecache` to false. (Want to help? Add commandline arguments to this.)
+
 ## Noncoders
 This program is designed to be included in other programs. For example, I made this so I could make a raspberry pi alarm  clock that would allow me to sleep in if there was no school. If have an idea for how this could be used, sumbit it as an Issue.
 

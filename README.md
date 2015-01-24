@@ -29,3 +29,5 @@ weatherScrapper.closingDictionary(useCache=False)
 
 ## Noncoders
 This program is designed to be included in other programs. For example, I made this so I could make a raspberry pi alarm  clock that would allow me to sleep in if there was no school. If have an idea for how this could be used, sumbit it as an Issue.
+
+![GPL 3 Licensed](https://www.gnu.org/graphics/gplv3-127x51.png)

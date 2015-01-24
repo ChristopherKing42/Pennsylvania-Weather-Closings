@@ -47,3 +47,9 @@ def closingDictionary(useCache=True, cache="closings.html"):
     organizedDict = {place.pop('name'): place for place in #Change the name into the key
                      chain(*(letter['institutions'] for letter in rawData.values() if type(letter) == dict))} #The raw data is organized by letter. Extract "institutions" from each and chain them together.
     return organizedDict
+
+if __name__ == '__main__':
+    for school, data in closingDictionary(False).iteritems():
+        print school
+        for key, value in data.iteritems():
+            print '\t'+key.upper()+': '+value

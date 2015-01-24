@@ -9,7 +9,7 @@ This program will scrap the page at http://www.wgal.com/weather/closings. (Penns
 {'Dixon Univ Center-Harrisburg': {'status': 'Saturday: Closed', 'emailListKey': 'lan_closingsibstandard119', 'updateTimestamp': '2015-01-23T15:16:00.000-06:00', 'address': 'Harrisburg / Dauphin / PA'}, 'Dillsburg Area Public Library': {'status': 'Saturday: Closed', 'emailListKey': 'lan_ ...
 ```
 
-Note that this function will place a cache of the file in `closings.html`. If you do want a cache, do.
+Note that this function will place a cache of the file in `closings.html`. If you do want a cache, do
 
 ```
 >>> closings(cache=None)
@@ -34,7 +34,7 @@ Dillsburg Area Public Library
 	STATUS: ...
 ```
 
-Not that callling it like this always sets `usecache` to false. (Want to help? Add commandline arguments to this.)
+Note that callling it like this always sets `useCache` to false. (Want to help? Add commandline arguments to this.)
 
 ![GPL 3 Licensed](https://www.gnu.org/graphics/gplv3-127x51.png)
 

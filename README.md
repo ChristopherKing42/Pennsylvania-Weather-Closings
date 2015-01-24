@@ -1,7 +1,7 @@
 # Pennsylvania-Weather-Closings
 Have you ever had a project where you needed to know if your school or bussiness is closed or delayed? Your problem is solved!
 
-This program will scrap the page at http://www.wgal.com/weather/closings (Pennslyvania-Weather-Closins nor its authors are affiliated with WGAL.)
+This program will scrap the page at http://www.wgal.com/weather/closings. (Pennslyvania-Weather-Closings nor its authors are affiliated with WGAL.)
 
 To get started, first run the following to command:
 ```

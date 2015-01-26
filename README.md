@@ -34,7 +34,21 @@ Dillsburg Area Public Library
 	STATUS: ...
 ```
 
-Note that callling it like this always sets `useCache` to false. (Want to help? Add commandline arguments to this.)
+Here is its command line info.
+
+```
+usage: weatherScrapper.py [-h] [--usecache] [--verbose] [--cache CACHE]
+
+Process closing information from external website
+
+optional arguments:
+  -h, --help     show this help message and exit
+  --usecache     use the HTML cached on the local machine
+  --verbose      write debugging to stderr
+  --cache CACHE  name of the cache file
+```
+
+Want to help? See [the wiki](../../wiki).
 
 ![GPL 3 Licensed](https://www.gnu.org/graphics/gplv3-127x51.png)
 

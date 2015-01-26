@@ -1,17 +1,3 @@
-##Copyright 2015 Christopher King
-##This file is part of Pennslyvania Weather Closings.
-##
-##Pennslyvania Weather Closings is free software: you can redistribute it and/or modify
-##it under the terms of the GNU General Public License as published by
-##the Free Software Foundation, either version 3 of the License, or
-##(at your option) any later version.
-##
-##Pennslyvania Weather Closings is distributed in the hope that it will be useful,
-##but WITHOUT ANY WARRANTY; without even the implied warranty of
-##MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-##GNU General Public License for more details.
-##
-##You should have received a copy of the GNU General Public License
 
 from urllib import urlopen
 import re
@@ -35,7 +21,7 @@ def closings(useCache=True, cache="closings.html", verbose=False):
             with open(cache, 'r') as cacheFile:
                 wgalSite = cacheFile.read()
         except IOError:
-            return closingDictionary(updateCache=False, cache=cache)
+            return closings(useCache=False, cache=cache)
     else:
         wgalSite = urlopen(wgalAddress).read()
         if cache:

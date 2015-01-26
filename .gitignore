@@ -58,3 +58,6 @@ target/
 
 ##Project Specific
 closings.html
+
+##PyCharm IDE
+.idea/
